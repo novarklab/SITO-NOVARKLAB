@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="520" height="140">
+  <defs>
+    <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4fd6ff"/>
+      <stop offset="100%" stop-color="#1c8fd6"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(70,70)">
+    <g fill="url(#gearGrad)">
+      <circle r="46"/>
+      <g id="teeth">
+        <rect x="-8" y="-62" width="16" height="20" rx="3"/>
+      </g>
+      <use href="#teeth" transform="rotate(30)"/>
+      <use href="#teeth" transform="rotate(60)"/>
+      <use href="#teeth" transform="rotate(90)"/>
+      <use href="#teeth" transform="rotate(120)"/>
+      <use href="#teeth" transform="rotate(150)"/>
+      <use href="#teeth" transform="rotate(180)"/>
+      <use href="#teeth" transform="rotate(210)"/>
+      <use href="#teeth" transform="rotate(240)"/>
+      <use href="#teeth" transform="rotate(270)"/>
+      <use href="#teeth" transform="rotate(300)"/>
+      <use href="#teeth" transform="rotate(330)"/>
+    </g>
+    <circle r="24" fill="#0b1220"/>
+    <circle r="9" fill="url(#gearGrad)"/>
+  </g>
+  <text x="150" y="65" font-family="'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700" fill="#f2f6fa" letter-spacing="1">NOVARK<tspan fill="#4fd6ff">LAB</tspan></text>
+  <text x="152" y="96" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400" fill="#9fb3c8" letter-spacing="3">PRECISIONE MECCANICA</text>
+</svg>
