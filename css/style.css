@@ -98,7 +98,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-logo {
-  width: min(480px, 80vw);
+  width: min(340px, 62vw);
   margin: 0 auto;
   opacity: 0;
   transform: scale(0) rotate(-15deg);
