@@ -59,12 +59,28 @@ img { max-width: 100%; display: block; }
   z-index: 5;
 }
 
-.nav-logo {
-  height: 36px;
-  width: auto;
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
   opacity: 0;
   animation: navFadeIn 0.8s ease-out 1.4s forwards;
 }
+
+.nav-logo {
+  height: 34px;
+  width: auto;
+}
+
+.nav-wordmark {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text-light);
+}
+
+.nav-wordmark .accent { color: var(--accent); }
 
 .nav-links {
   list-style: none;
@@ -98,12 +114,40 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-logo {
-  width: min(340px, 62vw);
+  position: relative;
+  width: min(520px, 82vw);
+  aspect-ratio: 1169 / 709;
   margin: 0 auto;
   opacity: 0;
   transform: scale(0) rotate(-15deg);
   filter: drop-shadow(0 0 0 rgba(79,214,255,0));
   animation: logoAppear 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  cursor: pointer;
+}
+
+.wave-strip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--i) * (100% / 12));
+  width: calc(100% / 12);
+  background-image: url('../assets/logo-full.png');
+  background-repeat: no-repeat;
+  background-size: 1200% 100%;
+  background-position: calc(var(--i) / 11 * 100%) center;
+  will-change: transform;
+}
+
+.hero-logo:hover .wave-strip {
+  animation: waveStrip 1s ease-in-out;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes waveStrip {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-9px); }
+  65%  { transform: translateY(7px); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes logoAppear {
@@ -309,7 +353,8 @@ img { max-width: 100%; display: block; }
   .navbar { padding: 16px 20px; }
   .nav-links { gap: 12px; font-size: 12px; }
   .nav-links a { white-space: nowrap; }
-  .nav-logo { height: 28px; }
+  .nav-logo { height: 26px; }
+  .nav-wordmark { font-size: 16px; }
 
   .product-card,
   .product-card[data-align="right"] {
@@ -324,8 +369,8 @@ img { max-width: 100%; display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-logo, .nav-logo, .nav-links, .hero-tagline, .scroll-cta,
-  .product-media, .product-desc, .scroll-arrow {
+  .hero-logo, .nav-brand, .nav-links, .hero-tagline, .scroll-cta,
+  .product-media, .product-desc, .scroll-arrow, .wave-strip {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
