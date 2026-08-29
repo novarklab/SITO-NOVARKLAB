@@ -61,40 +61,81 @@
   </section>
 
   <section class="products" id="prodotti">
-    <h2 class="section-title">I Nostri Componenti</h2>
+    <div class="products-intro">
+      <h2 class="section-title">I Nostri Componenti</h2>
+    </div>
 
     <!--
-      TEMPLATE PER OGNI NUOVO COMPONENTE — copia il blocco <article> qui sotto,
-      incollalo prima del commento "FINE COMPONENTI", alterna data-align="left"/"right",
-      sostituisci immagine, titolo e paragrafi di descrizione.
+      TEMPLATE PER OGNI NUOVO COMPONENTE — copia il blocco <div class="component-row">
+      qui sotto, incollalo prima del commento "FINE COMPONENTI", alterna
+      data-align="left"/"right", aggiorna il numero in .component-eyebrow,
+      sostituisci immagine, titolo, sintesi, specifiche (dl) e paragrafi di dettaglio.
+      L'id di component-detail deve essere univoco (detail-01, detail-02, ...).
     -->
 
-    <article class="product-card" data-align="left">
-      <div class="product-media">
-        <img src="assets/components/condotto-aspirazione.jpg" alt="Condotto di aspirazione ad alte prestazioni stampato in 3D" loading="lazy">
-      </div>
-      <div class="product-desc">
-        <h3>Condotto di aspirazione ad alte prestazioni</h3>
-        <p>Componente progettato per convogliare il flusso d'aria verso il sistema di aspirazione, realizzato su misura per adattarsi agli ingombri e ai punti di fissaggio del veicolo. La geometria interna è studiata per ottenere un passaggio dell'aria regolare, riducendo turbolenze e perdite di carico.</p>
-        <p>Realizzato tramite stampa 3D FDM in PPS-CF, tecnopolimero ad alte prestazioni rinforzato con fibra di carbonio, scelto per l'elevata rigidità, la stabilità dimensionale e la resistenza alle temperature tipiche del vano motore.</p>
-        <p>La produzione additiva permette di integrare direttamente nel componente flange, supporti, nervature di rinforzo e geometrie complesse, realizzando un pezzo personalizzato senza la necessità di stampi tradizionali.</p>
-        <p><strong>Applicazioni:</strong> aspirazioni personalizzate, motorsport, prototipi funzionali, modifiche automotive e sostituzione di componenti non più reperibili.</p>
-      </div>
-    </article>
+    <div class="component-row" data-align="left">
+      <article class="component">
+        <div class="component-media">
+          <img src="assets/components/condotto-aspirazione.jpg" alt="Condotto di aspirazione ad alte prestazioni stampato in 3D" loading="lazy">
+        </div>
+        <div class="component-info">
+          <span class="component-eyebrow">Componente 01</span>
+          <h3 class="component-title">Condotto di aspirazione ad alte prestazioni</h3>
+          <p class="component-summary">Componente progettato per convogliare il flusso d'aria verso il sistema di aspirazione, realizzato su misura per adattarsi agli ingombri e ai punti di fissaggio del veicolo.</p>
 
-    <article class="product-card" data-align="right">
-      <div class="product-media">
-        <img src="assets/components/staffa-strutturale.jpg" alt="Staffa strutturale rinforzata su misura stampata in 3D" loading="lazy">
-      </div>
-      <div class="product-desc">
-        <h3>Staffa strutturale rinforzata su misura</h3>
-        <p>Componente strutturale progettato su misura per il fissaggio e il supporto di elementi meccanici, sviluppato per ottenere un'elevata rigidità mantenendo peso e ingombri contenuti.</p>
-        <p>La geometria integra nervature di rinforzo, punti di ancoraggio e sedi di fissaggio direttamente nel componente, permettendo di distribuire efficacemente i carichi nelle zone maggiormente sollecitate.</p>
-        <p>Realizzato mediante stampa 3D FDM con tecnopolimero rinforzato con fibra di carbonio, materiale scelto per offrire elevata rigidità, buona stabilità dimensionale e resistenza alle sollecitazioni meccaniche.</p>
-        <p>Grazie alla progettazione CAD e alla produzione additiva possiamo modificare dimensioni, interassi, forature, spessori e geometria in funzione dell'applicazione del cliente, realizzando anche singoli pezzi e piccole serie senza necessità di stampi.</p>
-        <p><strong>Applicazioni:</strong> macchinari industriali, automotive, automazione, supporti per sensori e attuatori, attrezzature speciali, prototipi funzionali e sostituzione di componenti fuori produzione.</p>
-      </div>
-    </article>
+          <dl class="component-specs">
+            <div><dt>Materiale</dt><dd>PPS-CF</dd></div>
+            <div><dt>Tecnologia</dt><dd>Stampa 3D FDM</dd></div>
+            <div><dt>Settore</dt><dd>Automotive / Motorsport</dd></div>
+            <div><dt>Tipo</dt><dd>Componente funzionale</dd></div>
+          </dl>
+
+          <button type="button" class="component-toggle" aria-expanded="false" aria-controls="detail-01">
+            <span>Scopri il progetto</span><span class="toggle-arrow" aria-hidden="true">→</span>
+          </button>
+          <div class="component-detail-wrap">
+            <div class="component-detail" id="detail-01">
+              <p>La geometria interna è studiata per ottenere un passaggio dell'aria regolare, riducendo turbolenze e perdite di carico.</p>
+              <p>Realizzato tramite stampa 3D FDM in PPS-CF, tecnopolimero ad alte prestazioni rinforzato con fibra di carbonio, scelto per l'elevata rigidità, la stabilità dimensionale e la resistenza alle temperature tipiche del vano motore.</p>
+              <p>La produzione additiva permette di integrare direttamente nel componente flange, supporti, nervature di rinforzo e geometrie complesse, realizzando un pezzo personalizzato senza la necessità di stampi tradizionali.</p>
+              <p><strong>Applicazioni:</strong> aspirazioni personalizzate, motorsport, prototipi funzionali, modifiche automotive e sostituzione di componenti non più reperibili.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="component-row" data-align="right">
+      <article class="component">
+        <div class="component-media">
+          <img src="assets/components/staffa-strutturale.jpg" alt="Staffa strutturale rinforzata su misura stampata in 3D" loading="lazy">
+        </div>
+        <div class="component-info">
+          <span class="component-eyebrow">Componente 02</span>
+          <h3 class="component-title">Staffa strutturale rinforzata su misura</h3>
+          <p class="component-summary">Componente strutturale progettato su misura per il fissaggio e il supporto di elementi meccanici, con elevata rigidità e ingombri contenuti.</p>
+
+          <dl class="component-specs">
+            <div><dt>Materiale</dt><dd>Tecnopolimero-CF</dd></div>
+            <div><dt>Tecnologia</dt><dd>Stampa 3D FDM</dd></div>
+            <div><dt>Settore</dt><dd>Industriale / Automotive</dd></div>
+            <div><dt>Tipo</dt><dd>Componente strutturale</dd></div>
+          </dl>
+
+          <button type="button" class="component-toggle" aria-expanded="false" aria-controls="detail-02">
+            <span>Scopri il progetto</span><span class="toggle-arrow" aria-hidden="true">→</span>
+          </button>
+          <div class="component-detail-wrap">
+            <div class="component-detail" id="detail-02">
+              <p>La geometria integra nervature di rinforzo, punti di ancoraggio e sedi di fissaggio direttamente nel componente, permettendo di distribuire efficacemente i carichi nelle zone maggiormente sollecitate.</p>
+              <p>Realizzato mediante stampa 3D FDM con tecnopolimero rinforzato con fibra di carbonio, materiale scelto per offrire elevata rigidità, buona stabilità dimensionale e resistenza alle sollecitazioni meccaniche.</p>
+              <p>Grazie alla progettazione CAD e alla produzione additiva possiamo modificare dimensioni, interassi, forature, spessori e geometria in funzione dell'applicazione del cliente, realizzando anche singoli pezzi e piccole serie senza necessità di stampi.</p>
+              <p><strong>Applicazioni:</strong> macchinari industriali, automotive, automazione, supporti per sensori e attuatori, attrezzature speciali, prototipi funzionali e sostituzione di componenti fuori produzione.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
 
     <!-- FINE COMPONENTI -->
 
